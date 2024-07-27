@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="nav-title">Questions</div>
+      <div class="nav-items" id="nav-items">
+        <!-- Navigation items will be inserted here by JavaScript -->
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div class="timer">Time: <span id="timer">300</span>s</div>
+        <div class="score">Score: <span id="score">0</span></div>
+      </header>
+      <div class="content">
+        <div class="question-number">Question <span id="question-number">1</span></div>
+        <div class="question" id="question">What is the capital of France?</div>
+        <div class="options">
+          <button class="option" onclick="selectOption(this)" data-value="0">Paris <span class="tick-mark"></span></button>
+          <button class="option" onclick="selectOption(this)" data-value="1">London <span class="tick-mark"></span></button>
+          <button class="option" onclick="selectOption(this)" data-value="2">Berlin <span class="tick-mark"></span></button>
+          <button class="option" onclick="selectOption(this)" data-value="3">Madrid <span class="tick-mark"></span></button>
+        </div>
+        <button id="next" onclick="nextQuestion()">Next</button>
+        <button id="submit" onclick="submitQuiz()" style="display: none;">Submit</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
